@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package person;
+
+option java_package = "com.scratch.person";
+option java_outer_classname = "PersonProto";
+
+message Person {
+  optional string name = 1;
+  optional string email = 2;
+
+  message Address {
+    optional uint32 doorNo = 1;
+    repeated string street = 2;
+    optional string city = 3;
+  }
+
+  optional Address address = 3;
+}

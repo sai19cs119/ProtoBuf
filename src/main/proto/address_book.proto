@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package address_book;
+
+option java_package = "com.scratch.address_book";
+option java_outer_classname = "AddressBookEntryProto";
+
+import "person.proto";
+import "contact.proto";
+
+message AddressBookEntry {
+    optional person.Person person = 1;
+    optional contact.Contact contact = 2;
+}
